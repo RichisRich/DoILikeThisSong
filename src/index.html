@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do I Like This Song?</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <p class="eyebrow">Desktop music player</p>
+        <h1>Do I Like This Song?</h1>
+        <p class="muted">Pick a folder of music and start listening instantly.</p>
+      </div>
+
+      <button id="openFolderBtn" class="primary-btn">Open music folder</button>
+      <button id="confirmRatingsBtn" class="ghost-btn full-width">Confirm likes / dislikes</button>
+
+      <div class="folder-chip">
+        <span class="folder-label">Current folder</span>
+        <strong id="currentFolderLabel">None selected</strong>
+      </div>
+
+      <div class="info-card">
+        <h2>Now playing</h2>
+        <div id="coverArt" class="cover-art">♪</div>
+        <div id="trackTitle">No track selected</div>
+        <div id="trackArtist" class="muted">Choose a song to begin</div>
+        <div id="trackAlbum" class="muted"></div>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <h2>Library</h2>
+          <p id="statusText" class="muted">Select a folder to load your music.</p>
+        </div>
+      </header>
+        <section class="player-bar">
+          <audio id="audioPlayer" controls></audio>
+
+          <div class="transport">
+            <button id="prevTrackBtn" class="ghost-btn">⏮︎ Track</button>
+            <button id="back10Btn" class="ghost-btn">⏪ 10s</button>
+            <button id="forward10Btn" class="ghost-btn">10s ⏩</button>
+            <button id="nextTrackBtn" class="ghost-btn">Track ⏭︎</button>
+          </div>
+
+          <div class="progress-wrap">
+            <span id="currentTime">0:00</span>
+            <input id="progress" type="range" min="0" max="100" value="0" />
+            <span id="duration">0:00</span>
+          </div>
+        </section> 
+
+        <section class="library-panel">
+          <div id="trackList" class="track-list"></div>
+        </section>
+
+      
+    </main>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

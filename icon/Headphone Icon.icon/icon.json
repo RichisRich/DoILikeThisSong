@@ -1,0 +1,63 @@
+{
+  "fill" : {
+    "automatic-gradient" : "extended-srgb:0.00000,0.53333,1.00000,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "hidden" : true,
+          "image-name" : "Music Browser Icon 2 - Equalizer Folder.png",
+          "name" : "Music Browser Icon 2 - Equalizer Folder"
+        },
+        {
+          "hidden" : true,
+          "image-name" : "Music Browser Icon 5 - Play Button Pulse.png",
+          "name" : "Music Browser Icon 5 - Play Button Pulse"
+        },
+        {
+          "hidden" : false,
+          "image-name" : "Music Browser Icon 3 - Headphone Beats.png",
+          "name" : "Music Browser Icon 3 - Headphone Beats"
+        },
+        {
+          "hidden" : true,
+          "image-name" : "Music Browser Icon 1 - Vinyl Wave.png",
+          "name" : "Music Browser Icon 1 - Vinyl Wave"
+        },
+        {
+          "hidden" : true,
+          "image-name" : "Music Browser Icon 4 - Synth Knobs.png",
+          "name" : "Music Browser Icon 4 - Synth Knobs"
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

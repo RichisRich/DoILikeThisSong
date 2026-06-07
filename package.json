@@ -1,0 +1,36 @@
+{
+  "name": "do-i-like-this-song",
+  "version": "0.1.0",
+  "description": "Lightweight music player desktop app",
+  "author": "Richard Darracott",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "music-metadata": "^11.12.3"
+  },
+  "devDependencies": {
+    "electron": "^42.3.3",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.richarddarracott.doi-likethissong",
+    "productName": "Do I Like This Song",
+    "directories": {
+      "buildResources": "build"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "build/icon.icns"
+    },
+    "files": [
+      "**/*",
+      "!**/node_modules/.cache/**"
+    ]
+  }
+}
