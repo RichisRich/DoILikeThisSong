@@ -15,10 +15,30 @@ const nextTrackBtn = document.getElementById('nextTrackBtn');
 const progress = document.getElementById('progress');
 const currentTime = document.getElementById('currentTime');
 const duration = document.getElementById('duration');
+const themeToggleBtn = document.getElementById('themeToggleBtn');
 
 let files = [];
 let folderPath = '';
 const ratings = {};
+const themeStorageKey = 'doILikeThisSong-theme';
+
+function applyTheme(theme) {
+  const isLight = theme === 'light';
+  document.body.classList.toggle('theme-light', isLight);
+  themeToggleBtn.textContent = isLight ? '☀️' : '🌙';
+  themeToggleBtn.title = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+  themeToggleBtn.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+  localStorage.setItem(themeStorageKey, theme);
+}
+
+themeToggleBtn.addEventListener('click', () => {
+  const nextTheme = document.body.classList.contains('theme-light') ? 'dark' : 'light';
+  applyTheme(nextTheme);
+});
+
+const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+const savedTheme = localStorage.getItem(themeStorageKey) || preferredTheme;
+applyTheme(savedTheme);
 
 function formatTime(seconds) {
   if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
